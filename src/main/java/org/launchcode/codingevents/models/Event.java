@@ -1,4 +1,5 @@
 package org.launchcode.codingevents.models;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -7,6 +8,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Objects;
 
+/**
+ * Created by Chris Bay
+ */
 
 @Entity
 public class Event {
@@ -29,15 +33,13 @@ public class Event {
     private EventType type;
 
     public Event(String name, String description, String contactEmail, EventType type) {
-        this();
         this.name = name;
         this.description = description;
         this.contactEmail = contactEmail;
         this.type = type;
     }
 
-    public Event() {
-    }
+    public Event() {}
 
     public String getName() {
         return name;
